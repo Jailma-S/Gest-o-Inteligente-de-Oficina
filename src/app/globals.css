@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Tema industrial escuro: leitura rápida à distância. Cores de prioridade conforme a especificação. */
+@theme {
+  --color-bg: #0b1120;
+  --color-surface: #131c2e;
+  --color-surface-2: #1b263b;
+  --color-line: #2a3650;
+  --color-ink: #e8edf5;
+  --color-muted: #9aa8bf;
+  --color-p1: #ef4444;
+  --color-p2: #f59e0b;
+  --color-p3: #3b82f6;
+  --color-done: #10b981;
+  --color-accent: #facc15;
+  --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 0.75rem;
+  /* Permite que tabelas largas rolem dentro do card em vez de alargar a página. */
+  min-width: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-surface-2);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+.btn:hover {
+  border-color: var(--color-muted);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #111827;
+}
+.btn-primary:hover {
+  background: #fde047;
+}
+
+.input {
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.7rem;
+  color: var(--color-ink);
+  font-size: 0.875rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-line);
+}
+.table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-line);
+  vertical-align: middle;
+}
+.table tbody tr:hover {
+  background: var(--color-surface-2);
 }

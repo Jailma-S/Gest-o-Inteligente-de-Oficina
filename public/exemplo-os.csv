@@ -1,0 +1,5 @@
+os_number;plate;chassis;customer_name;service_type;estimated_hours;plan_gold;sensitive_cargo;promised_date;required_skill;parts_missing
+OS-30001;SAB1C23;;Transportes Serra Azul;Diagnóstico Complexo;5;Sim;Não;31/12/2026 18:00;Diagnóstico eletrônico;Não
+OS-30002;TQX4D56;;Rodovale Logística;Corretiva;3,5;Não;Sim;31/12/2026 12:00;Freios e suspensão;Não
+OS-30003;PLM7E89;;Agro Cerrado Transportes;Revisão;2;Não;Não;31/12/2026 17:00;Motor;Não
+OS-30004;RKD2F34;;Expresso Horizonte;Preventiva;1,5;Não;Não;;Freios e suspensão;Não
