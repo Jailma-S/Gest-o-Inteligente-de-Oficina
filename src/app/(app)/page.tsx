@@ -42,7 +42,7 @@ export default async function DashboardPage() {
         <section className="card xl:col-span-2" aria-labelledby="fila">
           <div className="flex items-center justify-between border-b border-line p-4">
             <h2 id="fila" className="font-bold">Fila priorizada e sugestão de alocação</h2>
-            <Link href="/os" className="text-sm text-accent hover:underline">Ver todas</Link>
+            <Link href="/os" className="text-sm text-accent-ink hover:underline">Ver todas</Link>
           </div>
           <QueueTable items={data.queue.slice(0, 8)} now={now} />
         </section>
@@ -59,7 +59,7 @@ export default async function DashboardPage() {
           <section className="card p-4" aria-labelledby="alertas">
             <div className="mb-3 flex items-center justify-between">
               <h2 id="alertas" className="font-bold">Alertas abertos</h2>
-              <Link href="/alertas" className="text-sm text-accent hover:underline">{openAlerts.length} no total</Link>
+              <Link href="/alertas" className="text-sm text-accent-ink hover:underline">{openAlerts.length} no total</Link>
             </div>
             <ul className="flex flex-col gap-2 text-sm">
               {openAlerts.slice(0, 5).map((a) => (

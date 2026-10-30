@@ -21,12 +21,12 @@ export const OPERATION_CONFIG = {
 } as const;
 
 export const PRIORITY_META = {
-  P1: { label: "P1 · Máxima", color: "#EF4444" },
-  P2: { label: "P2 · Operacional", color: "#F59E0B" },
-  P3: { label: "P3 · Programada", color: "#3B82F6" },
+  P1: { label: "P1 · Máxima", color: "#DC2626" },
+  P2: { label: "P2 · Operacional", color: "#B45309" },
+  P3: { label: "P3 · Programada", color: "#2563EB" },
 } as const;
 
-export const DONE_COLOR = "#10B981";
+export const DONE_COLOR = "#047857";
 
 export const STATUS_LABEL = {
   WAITING: "Aguardando",

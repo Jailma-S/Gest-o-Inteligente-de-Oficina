@@ -24,7 +24,7 @@ export default async function TvPanelPage() {
       <AutoRefresh seconds={15} />
       <header className="flex flex-wrap items-center justify-between gap-4">
         <div className="text-4xl font-extrabold">
-          PCP <span className="text-accent">360°</span> <span className="text-2xl font-semibold text-muted">· Chão de oficina</span>
+          PCP <span className="text-accent-ink">360°</span> <span className="text-2xl font-semibold text-muted">· Chão de oficina</span>
         </div>
         <div className="flex gap-6 text-xl">
           <span>Fila <b className="tabular-nums">{data.kpis.queueSize}</b></span>

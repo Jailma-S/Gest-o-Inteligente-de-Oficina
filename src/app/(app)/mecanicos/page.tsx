@@ -51,7 +51,7 @@ export default async function TechniciansPage() {
                         <td key={s.id} className="text-center tabular-nums">
                           {own ? (
                             <span title={own.certified ? "Certificado" : undefined} className={own.proficiency >= 4 ? "font-bold" : "text-muted"}>
-                              {own.proficiency}{own.certified && <span className="text-accent">★</span>}
+                              {own.proficiency}{own.certified && <span className="text-accent-ink">★</span>}
                             </span>
                           ) : (
                             <span className="text-line">·</span>

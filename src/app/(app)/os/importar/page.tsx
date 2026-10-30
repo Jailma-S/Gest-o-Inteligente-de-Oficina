@@ -17,7 +17,7 @@ export default async function ImportPage() {
         <h2 id="formato" className="mb-2 font-bold">Formato do arquivo</h2>
         <p className="text-muted">
           Separador <code>;</code> ou <code>,</code>. Primeira linha com os nomes das colunas.{" "}
-          <a href="/exemplo-os.csv" download className="text-accent underline">Baixar exemplo</a>.
+          <a href="/exemplo-os.csv" download className="text-accent-ink underline">Baixar exemplo</a>.
         </p>
         <p className="mt-2"><code className="break-all text-xs">{CSV_COLUMNS.join(";")}</code></p>
         <ul className="mt-3 list-disc pl-5 text-muted">

@@ -1,23 +1,25 @@
 @import "tailwindcss";
 
-/* Tema industrial escuro: leitura rápida à distância. Cores de prioridade conforme a especificação. */
+/* Tema claro. Cores de prioridade em tons escuros para manter contraste WCAG AA sobre o branco. */
 @theme {
-  --color-bg: #0b1120;
-  --color-surface: #131c2e;
-  --color-surface-2: #1b263b;
-  --color-line: #2a3650;
-  --color-ink: #e8edf5;
-  --color-muted: #9aa8bf;
-  --color-p1: #ef4444;
-  --color-p2: #f59e0b;
-  --color-p3: #3b82f6;
-  --color-done: #10b981;
+  --color-bg: #f3f5f9;
+  --color-surface: #ffffff;
+  --color-surface-2: #eef1f6;
+  --color-line: #d5dbe5;
+  --color-ink: #0f172a;
+  --color-muted: #5b6780;
+  --color-p1: #dc2626;
+  --color-p2: #b45309;
+  --color-p3: #2563eb;
+  --color-done: #047857;
+  /* Amarelo só como preenchimento; texto e contornos usam o tom escuro. */
   --color-accent: #facc15;
+  --color-accent-ink: #a16207;
   --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -27,7 +29,7 @@ body {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-accent);
+  outline: 3px solid var(--color-accent-ink);
   outline-offset: 2px;
 }
 
@@ -35,6 +37,7 @@ body {
   background: var(--color-surface);
   border: 1px solid var(--color-line);
   border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.06);
   /* Permite que tabelas largas rolem dentro do card em vez de alargar a página. */
   min-width: 0;
 }
